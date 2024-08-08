@@ -1,5 +1,6 @@
 import socket
 
+
 def setupDataConnection(token):
     while True:
         dataSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -42,12 +43,14 @@ def getList(dataSocket):
         else:
             dataSocket.close()
             return data
-       
 
 
 def getData(loggedIn, commandSegments, token):
     data = "No Data"
-    if loggedIn and ((len(commandSegments) == 1 and commandSegments[0] == "LIST") or (len(commandSegments) == 2 and commandSegments[0] == "DL")):
+    if loggedIn and (
+        (len(commandSegments) == 1 and commandSegments[0] == "LIST")
+        or (len(commandSegments) == 2 and commandSegments[0] == "DL")
+    ):
         dataSocket = setupDataConnection(token)
         if commandSegments[0] == "LIST":
             data = getList(dataSocket)
@@ -66,7 +69,6 @@ if __name__ == "__main__":
     while True:
         command = input("Enter Your Command:")
         commandSocket.send(command.encode())
-        
 
         commandSegments = command.split()
         data = getData(loggedIn, commandSegments, token)

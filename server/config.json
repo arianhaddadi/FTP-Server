@@ -1,47 +1,46 @@
 {
-  "commandChannelPort": 8000,
-  "dataChannelPort":8001,
-  "users": [
-    {
-      "user": "navid",
-      "password": "1234"
-    },
-    {
-      "user": "farzad",
-      "password": "5678"
-    }
-  ],
-  "accounting": {
-    "enable": true,
-    "threshold": 100,
+    "commandChannelPort": 8000,
+    "dataChannelPort": 8001,
     "users": [
-      {
-        "user": "navid",
-        "size": "12000",
-        "email": "navid@akbari.com",
-        "alert": true
-      },
-      {
-        "user": "farzad",
-        "size": "650000",
-        "email": "a94h.73@gmail.com",
-        "alert": false
-      }
-    ]
-  },
-  "logging": {
-    "enable": true,
-    "path": "./logs.log"
-  },
-  "authorization": {
-    "enable": true,
-    "admins": [
-      "navid"
+        {
+            "user": "navid",
+            "password": "1234"
+        },
+        {
+            "user": "farzad",
+            "password": "5678"
+        }
     ],
-    "files": [
-      "./config.json",
-      "./example.png"
-    ]
-  }
-    
+    "accounting": {
+        "enable": true,
+        "threshold": 100,
+        "users": [
+            {
+                "user": "navid",
+                "size": "12000",
+                "email": "navid@akbari.com",
+                "alert": true
+            },
+            {
+                "user": "farzad",
+                "size": "650000",
+                "email": "a94h.73@gmail.com",
+                "alert": false
+            }
+        ]
+    },
+    "logging": {
+        "enable": true,
+        "path": "./logs.log"
+    },
+    "authorization": {
+        "enable": true,
+        "admins": [
+            "navid"
+        ],
+        "files": [
+            "./config.json",
+            "./example.png"
+        ]
+    }
 }
